@@ -65,6 +65,7 @@ const showFoodDetails = id => {
         .then(data => {
             let item = data.meals[0];
             let ingredients = "";
+            // akane index and ingrdients fixed korar jonno for loop use kora hoyace// forEach use korle all ingredients list sow kore.
             for (let i = 1; i <= 6; i++) {
                 ingredients += `<li><i class="material-icons">check_box</i> ${item["strIngredient" + i]}</li>`;
             }
