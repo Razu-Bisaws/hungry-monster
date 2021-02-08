@@ -67,7 +67,7 @@ const showFoodDetails = id => {
             let ingredients = "";
             let measurement = "";
             // akane index and ingredients fixed korar jonno for loop use kora hoyace//forEach use korle all ingredients list show kore..
-            for (let i = 1; i <= 3; i++) {
+            for (let i = 1; i <= 5; i++) {
                 ingredients += `<li><i class="material-icons">check_box</i> ${item["strIngredient" + i]}</li>`;
                 measurement += `<li><i class="material-icons">check_box</i> ${item["strMeasure"+i]}</li>`;
             }
