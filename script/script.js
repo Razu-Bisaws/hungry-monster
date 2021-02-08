@@ -65,9 +65,11 @@ const showFoodDetails = id => {
         .then(data => {
             let item = data.meals[0];
             let ingredients = "";
+            let measurement = "";
             // akane index and ingredients fixed korar jonno for loop use kora hoyace//forEach use korle all ingredients list show kore..
-            for (let i = 1; i <= 6; i++) {
+            for (let i = 1; i <= 3; i++) {
                 ingredients += `<li><i class="material-icons">check_box</i> ${item["strIngredient" + i]}</li>`;
+                measurement += `<li><i class="material-icons">check_box</i> ${item["strMeasure"+i]}</li>`;
             }
             detailsArea.innerHTML = `<section id="modal">
               <div class="modal-content">
@@ -78,7 +80,7 @@ const showFoodDetails = id => {
                     <div class="details">
                       <h1>${item.strMeal}</h1>
                       <h4>Ingredients</h4>
-                      <ul>${ingredients}</ul>
+                      <ul>${ingredients+measurement}</ul>
                     </div>
                   </div>
                 </div>
